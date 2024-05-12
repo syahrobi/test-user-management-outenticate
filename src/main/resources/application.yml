@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: user.management
+
+  datasource:
+    url: 'jdbc:postgresql://localhost:5432/postgres'
+    username: postgres
+    password: admin
+
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+
+security:
+  secretkey: 8b8ffe9f586423ca0283d64a6b6a5061376549c0fd229d3db6f91e81e7030ca1
+  expirationtime: '3600000'
